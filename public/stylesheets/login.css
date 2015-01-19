@@ -1,0 +1,14 @@
+body {
+    background-color: #FF1919;
+}
+
+div {
+width: 320px;
+    background-color: #3333FF;
+   border: 2px solid black;
+float:right;
+}
+p {
+    text-align: center;
+    color: red;
+} 

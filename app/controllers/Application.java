@@ -4,16 +4,18 @@ import play.*;
 import play.mvc.*;
 import play.data.format.*;
 import views.html.*;
-
-import play.data.Form;
+import views.html.helper.form;
+import play.data.*;
 
 public class Application extends Controller {
 
 	public static Result index() {
-        return ok(index.render("Your application is Ready"));
+        return ok(index.render("Your new application is ready."));
     }
+
   public static Result login() {
-        return ok(login.render(Form.form(Login.class)));
+	return ok(login.render(Form.form(Login.class)));
+	  
     }
     public static class Login {
 
@@ -25,5 +27,7 @@ public class Application extends Controller {
         Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
         return ok();
     }
+    
+  
     
 }

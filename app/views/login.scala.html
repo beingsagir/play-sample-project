@@ -1,16 +1,16 @@
-@(form: Form[Application.Login]
+@(form: Form[Application.Login])
 <html>
     <head>
-        <title>Zentasks</title>
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <title>User Login</title>
         <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/login.css")">
     </head>
     <body>
         <header>
-            <a href="@routes.Application.index" id="logo"><span>Zen</span>tasks</a>
+            <a href="@routes.Application.index" id="logo">Home</a>
         </header>
-  	 	@helper.form(routes.Application.authenticate) {
-   <h1>Sign in</h1>
+  	 	<div>@helper.form(routes.Application.authenticate) {
+  	 	
+   <h1 align="center">Sign in</h1>
 
    <p>
        <input type="email" name="email" placeholder="Email" value="@form("email").value">
@@ -21,6 +21,7 @@
    <p>
        <button type="submit">Login</button>
    </p>
+   </div>
 } 
     </body>
 </html>

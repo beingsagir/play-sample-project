@@ -13,3 +13,5 @@ libraryDependencies ++= Seq(
   javaWs,
   "mysql" % "mysql-connector-java" % "5.1.18"
 )
+
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.5.0")
